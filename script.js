@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             data.features.forEach(feature => {
                 if (feature.geometry.type === "Point") {
+                    console.log(feature.geometry)
                     const row = pointTable.insertRow();
                     const nameCell = row.insertCell(0);
                     const coordinatesCell = row.insertCell(1);
